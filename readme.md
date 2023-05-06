@@ -52,3 +52,7 @@ This library is a demo for learning purposes only and is not intended to be cont
 ## License
 
 This demo UI library is licensed under the [MIT License](https://github.com/Timonwa/demo-ui-library/blob/main/license).
+
+## Connect
+
+More of my articles can be found in [Timonwa's Notes](https://blog.timonwa.com). Connect with me on Twitter: [@timonwa_](https://twitter.com/timonwa_)
