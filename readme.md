@@ -49,10 +49,21 @@ export default App;
 
 This library is a demo for learning purposes only and is not intended to be contributed to. You can fork the repository and use the code for your personal use or learning.
 
+### Steps
+
+- Fork the repository.
+- Clone the repository to your local machine.
+- Install the dependencies using `npm install`.
+- View the components in the browser using `npm run storybook`.
+- Make your changes.
+- Test your changes using `npm test`.
+- Build the library using `npm run build`.
+- Commit your changes and push them to your forked repository.
+
 ## License
 
 This demo UI library is licensed under the [MIT License](https://github.com/Timonwa/demo-ui-library/blob/main/license).
 
 ## Connect
 
-More of my articles can be found in [Timonwa's Notes](https://blog.timonwa.com). Connect with me on Twitter: [@timonwa_](https://twitter.com/timonwa_)
+More of my articles can be found in [Timonwa's Notes](https://blog.timonwa.com). Connect with me on Twitter: [@timonwa\_](https://twitter.com/timonwa_)
