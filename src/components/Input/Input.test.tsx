@@ -1,7 +1,7 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import userEvent from "@testing-library/user-event";
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 
 import Input from "./Input";
 
@@ -14,10 +14,11 @@ describe("Running Test for Marbella Input", () => {
     );
   });
 
-  test("renders the Input component", () => {
+  test("renders the Input component", async () => {
     render(<Input placeholder="marbella" />);
     const input = screen.getByPlaceholderText("marbella") as HTMLInputElement;
     userEvent.type(input, "Hello world!");
-    expect(input.value).toBe("Hello world!");
+    await waitFor(() => expect(input.value).toBe("Hello world!"));
   });
+
 });
