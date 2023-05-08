@@ -7,7 +7,7 @@ This is a demo UI component library created using React, TypeScript, Rollup, Sto
 You can install this demo UI library using npm:
 
 ```
-npm install @timonwa/ui-library-demo
+npm install @timonwa/demo-ui-library
 ```
 
 ## Usage
@@ -16,7 +16,7 @@ To use this demo UI library in your project, import the components you need from
 
 ```jsx
 import React from "react";
-import { Input, Button } from "@timonwa/ui-library-demo";
+import { Input, Button } from "@timonwa/demo-ui-library";
 
 function App() {
   return (
