@@ -12,7 +12,7 @@ export default meta;
 type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = (args) => (
-  <Button data-testId="InputField-id" {...args} />
+  <Button data-test-id="InputField-id" {...args} />
 );
 Primary.args = {
   primary: true,
@@ -21,7 +21,7 @@ Primary.args = {
 };
 
 export const Secondary: Story = (args) => (
-  <Button data-testId="InputField-id" {...args} />
+  <Button data-test-id="InputField-id" {...args} />
 );
 Secondary.args = {
   primary: false,
@@ -30,7 +30,7 @@ Secondary.args = {
 };
 
 export const Disabled: Story = (args) => (
-  <Button data-testId="InputField-id" {...args} />
+  <Button data-test-id="InputField-id" {...args} />
 );
 Disabled.args = {
   primary: false,
@@ -39,7 +39,7 @@ Disabled.args = {
 };
 
 export const Small: Story = (args) => (
-  <Button data-testId="InputField-id" {...args} />
+  <Button data-test-id="InputField-id" {...args} />
 );
 Small.args = {
   primary: true,
@@ -49,7 +49,7 @@ Small.args = {
 };
 
 export const Medium: Story = (args) => (
-  <Button data-testId="InputField-id" {...args} />
+  <Button data-test-id="InputField-id" {...args} />
 );
 Medium.args = {
   primary: true,
@@ -59,7 +59,7 @@ Medium.args = {
 };
 
 export const Large: Story = (args) => (
-  <Button data-testId="InputField-id" {...args} />
+  <Button data-test-id="InputField-id" {...args} />
 );
 Large.args = {
   primary: true,

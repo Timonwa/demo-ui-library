@@ -12,7 +12,7 @@ export default meta;
 type Story = StoryObj<typeof Input>;
 
 export const Primary: Story = (args) => (
-  <Input data-testId="InputField-id" {...args} />
+  <Input data-test-id="InputField-id" {...args} />
 );
 Primary.args = {
   error: false,
@@ -21,7 +21,7 @@ Primary.args = {
 };
 
 export const Success: Story = (args) => (
-  <Input data-testId="InputField-id" {...args} />
+  <Input data-test-id="InputField-id" {...args} />
 );
 Success.args = {
   error: false,
@@ -31,7 +31,7 @@ Success.args = {
 };
 
 export const Error: Story = (args) => (
-  <Input data-testId="InputField-id" {...args} />
+  <Input data-test-id="InputField-id" {...args} />
 );
 Error.args = {
   error: true,
@@ -40,7 +40,7 @@ Error.args = {
 };
 
 export const Disabled: Story = (args) => (
-  <Input data-testId="InputField-id" {...args} />
+  <Input data-test-id="InputField-id" {...args} />
 );
 Disabled.args = {
   disabled: true,
