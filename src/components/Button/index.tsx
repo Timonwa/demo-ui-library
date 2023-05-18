@@ -1,6 +1,13 @@
-import React from "react";
 import styled from "styled-components";
-import { ButtonProps } from "./Button.types";
+import { type MouseEventHandler } from "react";
+
+export interface ButtonProps {
+  text?: string;
+  primary?: boolean;
+  disabled?: boolean;
+  size?: "small" | "medium" | "large";
+  onClick?: MouseEventHandler<HTMLButtonElement>;
+}
 
 const StyledButton = styled.button<ButtonProps>`
   border: 0;
@@ -34,7 +41,7 @@ const StyledButton = styled.button<ButtonProps>`
   }
 `;
 
-const Button: React.FC<ButtonProps> = ({
+export const Button: React.FC<ButtonProps> = ({
   size,
   primary,
   disabled,
@@ -49,10 +56,9 @@ const Button: React.FC<ButtonProps> = ({
       primary={primary}
       disabled={disabled}
       size={size}
-      {...props}>
+      {...props}
+    >
       {text}
     </StyledButton>
   );
 };
-
-export default Button;

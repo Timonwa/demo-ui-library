@@ -1,6 +1,16 @@
-import React, { FC, Fragment } from "react";
+import { type ChangeEventHandler, type FC } from "react";
 import styled from "styled-components";
-import { InputProps } from "./Input.types";
+
+export interface InputProps {
+  id?: string;
+  label?: string;
+  error?: boolean;
+  message?: string;
+  success?: boolean;
+  disabled?: boolean;
+  placeholder?: string;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
+}
 
 const StyledInput = styled.input<InputProps>`
   height: 40px;
@@ -29,7 +39,7 @@ const StyledLabel = styled.div<InputProps>`
 
 const StyledMessage = styled.div<InputProps>`
   font-size: 14px;
-  color: #a9150b8;
+  color: #a9150b;
   padding-top: 4px;
 `;
 
@@ -39,7 +49,7 @@ const StyledText = styled.p<InputProps>`
     props.disabled ? "#e4e3ea" : props.error ? "#a9150b" : "#080808"};
 `;
 
-const Input: FC<InputProps> = ({
+export const Input: FC<InputProps> = ({
   id,
   disabled,
   label,
@@ -51,7 +61,7 @@ const Input: FC<InputProps> = ({
   ...props
 }) => {
   return (
-    <Fragment>
+    <>
       <StyledLabel>
         <StyledText disabled={disabled} error={error}>
           {label}
@@ -65,12 +75,11 @@ const Input: FC<InputProps> = ({
         error={error}
         success={success}
         placeholder={placeholder}
-        {...props}></StyledInput>
+        {...props}
+      ></StyledInput>
       <StyledMessage>
         <StyledText error={error}>{message}</StyledText>
       </StyledMessage>
-    </Fragment>
+    </>
   );
 };
-
-export default Input;

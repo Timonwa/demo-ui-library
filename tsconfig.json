@@ -12,11 +12,12 @@
     "moduleResolution": "node",
     "emitDeclarationOnly": true,
     "allowSyntheticDefaultImports": true,
+    "target": "ESNext",
+    "baseUrl": ".",
+    "paths": {
+      "@timonwa/demo-ui-library": ["./src/index"]
+    },
+    "types": ["@types/jest"]
   },
-  "exclude": [
-    "dist",
-    "node_modules",
-    "src/**/*.test.tsx",
-    "src/**/*.stories.tsx"
-  ]
+  "exclude": ["dist", "node_modules"]
 }

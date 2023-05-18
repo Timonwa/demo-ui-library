@@ -1,6 +1,5 @@
-import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import Button from "./Button";
+import { Button, type ButtonProps } from "@timonwa/demo-ui-library";
 
 const meta: Meta<typeof Button> = {
   component: Button,
@@ -11,7 +10,7 @@ export default meta;
 
 type Story = StoryObj<typeof Button>;
 
-export const Primary: Story = (args) => (
+export const Primary: Story = (args: JSX.IntrinsicAttributes & ButtonProps) => (
   <Button data-test-id="InputField-id" {...args} />
 );
 Primary.args = {
@@ -20,25 +19,25 @@ Primary.args = {
   text: "Primary",
 };
 
-export const Secondary: Story = (args) => (
-  <Button data-test-id="InputField-id" {...args} />
-);
+export const Secondary: Story = (
+  args: JSX.IntrinsicAttributes & ButtonProps
+) => <Button data-test-id="InputField-id" {...args} />;
 Secondary.args = {
   primary: false,
   disabled: false,
   text: "Secondary",
 };
 
-export const Disabled: Story = (args) => (
-  <Button data-test-id="InputField-id" {...args} />
-);
+export const Disabled: Story = (
+  args: JSX.IntrinsicAttributes & ButtonProps
+) => <Button data-test-id="InputField-id" {...args} />;
 Disabled.args = {
   primary: false,
   disabled: true,
   text: "Disabled",
 };
 
-export const Small: Story = (args) => (
+export const Small: Story = (args: JSX.IntrinsicAttributes & ButtonProps) => (
   <Button data-test-id="InputField-id" {...args} />
 );
 Small.args = {
@@ -48,7 +47,7 @@ Small.args = {
   text: "Small",
 };
 
-export const Medium: Story = (args) => (
+export const Medium: Story = (args: JSX.IntrinsicAttributes & ButtonProps) => (
   <Button data-test-id="InputField-id" {...args} />
 );
 Medium.args = {
@@ -58,7 +57,7 @@ Medium.args = {
   text: "Medium",
 };
 
-export const Large: Story = (args) => (
+export const Large: Story = (args: JSX.IntrinsicAttributes & ButtonProps) => (
   <Button data-test-id="InputField-id" {...args} />
 );
 Large.args = {

@@ -1,9 +1,7 @@
-import React from "react";
 import "@testing-library/jest-dom";
 import userEvent from "@testing-library/user-event";
 import { render, screen, waitFor } from "@testing-library/react";
-
-import Input from "./Input";
+import { Input } from "@timonwa/demo-ui-library";
 
 describe("Running Test for Marbella Input", () => {
   test("Check placeholder in Input", () => {
@@ -20,5 +18,4 @@ describe("Running Test for Marbella Input", () => {
     userEvent.type(input, "Hello world!");
     await waitFor(() => expect(input.value).toBe("Hello world!"));
   });
-
 });

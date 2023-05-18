@@ -1,6 +1,5 @@
-import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import Input from "./Input";
+import { Input, type InputProps } from "@timonwa/demo-ui-library";
 
 const meta: Meta<typeof Input> = {
   component: Input,
@@ -11,7 +10,7 @@ export default meta;
 
 type Story = StoryObj<typeof Input>;
 
-export const Primary: Story = (args) => (
+export const Primary: Story = (args: JSX.IntrinsicAttributes & InputProps) => (
   <Input data-test-id="InputField-id" {...args} />
 );
 Primary.args = {
@@ -20,7 +19,7 @@ Primary.args = {
   label: "Primary",
 };
 
-export const Success: Story = (args) => (
+export const Success: Story = (args: JSX.IntrinsicAttributes & InputProps) => (
   <Input data-test-id="InputField-id" {...args} />
 );
 Success.args = {
@@ -30,7 +29,7 @@ Success.args = {
   label: "Success",
 };
 
-export const Error: Story = (args) => (
+export const Error: Story = (args: JSX.IntrinsicAttributes & InputProps) => (
   <Input data-test-id="InputField-id" {...args} />
 );
 Error.args = {
@@ -39,7 +38,7 @@ Error.args = {
   message: "Error",
 };
 
-export const Disabled: Story = (args) => (
+export const Disabled: Story = (args: JSX.IntrinsicAttributes & InputProps) => (
   <Input data-test-id="InputField-id" {...args} />
 );
 Disabled.args = {
