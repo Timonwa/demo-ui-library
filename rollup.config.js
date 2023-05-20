@@ -1,7 +1,7 @@
-const resolve = require("@rollup/plugin-node-resolve");
-const typescript = require("@rollup/plugin-typescript");
+const resolve = require("@rollup/plugin-node-resolve").default;
+const typescript = require("@rollup/plugin-typescript").default;
 const peerDepsExternal = require("rollup-plugin-peer-deps-external");
-const packageJson = require("./package");
+const packageJson = require("./package.json");
 
 module.exports = [
   {
@@ -18,6 +18,12 @@ module.exports = [
         sourcemap: true,
       },
     ],
-    plugins: [peerDepsExternal(), resolve(), typescript()],
+    plugins: [
+      peerDepsExternal(),
+      resolve(),
+      typescript({
+        exclude: ['*/**/*.stories.*', '*/**/*.test.*']
+      }),
+    ],
   },
 ];

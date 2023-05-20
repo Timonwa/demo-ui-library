@@ -1,11 +1,18 @@
 import styled from "styled-components";
-import { type MouseEventHandler } from "react";
+import { type MouseEventHandler, type ReactNode } from "react";
 
 export interface ButtonProps {
-  text?: string;
+  /** Content of the button */
+  text?: ReactNode;
+
+  /** Is prymary apperiance */
   primary?: boolean;
+
   disabled?: boolean;
+
+  /** Button sizes */
   size?: "small" | "medium" | "large";
+
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
@@ -41,6 +48,7 @@ const StyledButton = styled.button<ButtonProps>`
   }
 `;
 
+/** Button component */
 export const Button: React.FC<ButtonProps> = ({
   size,
   primary,
