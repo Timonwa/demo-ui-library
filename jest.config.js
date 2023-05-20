@@ -6,7 +6,7 @@ module.exports = {
   preset: "ts-jest",
   testEnvironment: "jsdom",
   roots: ["<rootDir>"],
-  modulePaths: [compilerOptions.baseUrl], // <-- This will be set to 'baseUrl' value
+  modulePaths: [compilerOptions.baseUrl],
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
     prefix: "<rootDir>/",
   }),
