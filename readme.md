@@ -2,6 +2,8 @@
 
 This is a demo UI component library created using React, TypeScript, Rollup, Storybook, Jest, and React Testing Library. It was created for an article update for [LogRocket](https://blog.logrocket.com/author/pelumiakintokun/) on how to create a UI component library in React. You can read the article [here](https://blog.logrocket.com/build-component-library-react-typescript/).
 
+Visit my blog, [Timonwa's Notes](https://blog.timonwa.com), for awesome technical contents like articles, codesnippets, tech goodies, community projects and more.
+
 ## Installation
 
 You can install this demo UI library using npm:
