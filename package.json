@@ -1,8 +1,11 @@
 {
   "name": "@timonwa/demo-ui-library",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A demo on how to create a React UI component library using React, Typescript, Rollup, Storybook, Jest and React testing library.",
-  "repository": "https://github.com/Timonwa/demo-ui-library",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Timonwa/demo-ui-library.git"
+  },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/types.d.ts",
