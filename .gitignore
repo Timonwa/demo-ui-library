@@ -2,3 +2,4 @@ node_modules
 .vscode
 yarn.lock
 dist
+pnpm-lock.yaml
